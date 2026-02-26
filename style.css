@@ -23,7 +23,6 @@ html, body {
   user-select: none;
 }
 
-/* ── Starfield Background ── */
 .starfield {
   position: fixed; inset: 0;
   z-index: 0;
@@ -31,7 +30,6 @@ html, body {
 }
 .starfield canvas { width: 100%; height: 100%; }
 
-/* ── Screen System ── */
 .screen {
   position: fixed; inset: 0;
   z-index: 10;
@@ -47,7 +45,7 @@ html, body {
   pointer-events: all;
 }
 
-/* ── Welcome Screen ── */
+/* Welcome */
 .welcome-subtitle {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
@@ -65,7 +63,6 @@ html, body {
   line-height: 1.1;
   text-align: center;
   margin-bottom: 0.5rem;
-  animation: fadeInUp 1s ease 0.4s both;
   background: linear-gradient(135deg, var(--star-white) 0%, var(--gold-sun) 50%, var(--star-white) 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -83,7 +80,6 @@ html, body {
   animation: fadeInUp 1s ease 0.6s both;
 }
 
-/* ── Orbit Ring Decoration ── */
 .orbit-ring {
   position: absolute;
   border: 1px solid rgba(123, 94, 167, 0.12);
@@ -95,7 +91,6 @@ html, body {
 .orbit-ring.r2 { width: 180vw; height: 180vw; animation-duration: 90s; animation-direction: reverse; }
 .orbit-ring.r3 { width: 100vw; height: 100vw; animation-duration: 45s; }
 
-/* ── CTA Button ── */
 .btn-scan {
   position: relative;
   display: flex; align-items: center; gap: 0.75rem;
@@ -124,7 +119,7 @@ html, body {
 .btn-scan:hover { border-color: var(--gold-sun); transform: scale(1.03); }
 .btn-scan svg { width: 20px; height: 20px; flex-shrink: 0; }
 
-/* ── Camera Screen ── */
+/* Camera */
 #screen-camera { background: #000; }
 .camera-container {
   position: relative;
@@ -205,7 +200,6 @@ html, body {
   display: flex; align-items: center; justify-content: center;
 }
 
-/* ── File Upload Fallback ── */
 .upload-fallback {
   position: absolute;
   bottom: max(4vh, 30px);
@@ -227,13 +221,9 @@ html, body {
 .btn-upload:hover { background: rgba(255,255,255,0.2); color: white; }
 #file-input { display: none; }
 
-/* ── Loading Screen ── */
-#screen-loading {
-  background: var(--deep-space);
-}
-.loading-content {
-  text-align: center;
-}
+/* Loading */
+#screen-loading { background: var(--deep-space); }
+.loading-content { text-align: center; }
 .loading-orb {
   width: 80px; height: 80px;
   margin: 0 auto 2rem;
@@ -250,11 +240,8 @@ html, body {
   animation: fadeInOut 2s ease infinite;
 }
 
-/* ── Planet View Screen ── */
-#screen-planet {
-  background: transparent;
-  padding: 0;
-}
+/* Planet View */
+#screen-planet { background: transparent; padding: 0; }
 #three-canvas {
   width: 100% !important;
   height: 100% !important;
@@ -325,7 +312,6 @@ html, body {
 .btn-action:hover { background: rgba(255,255,255,0.12); color: white; }
 .btn-action svg { width: 16px; height: 16px; }
 
-/* ── Screenshot Flash ── */
 .flash {
   position: fixed; inset: 0;
   background: white;
@@ -333,15 +319,11 @@ html, body {
   opacity: 0;
   pointer-events: none;
 }
-.flash.active {
-  animation: flashAnim 0.5s ease;
-}
+.flash.active { animation: flashAnim 0.5s ease; }
 
-/* ── Hidden Canvas ── */
 #capture-canvas { display: none; }
 #texture-canvas { display: none; }
 
-/* ── Keyframes ── */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -371,7 +353,6 @@ html, body {
   100% { opacity: 0; }
 }
 
-/* ── Toast ── */
 .toast {
   position: fixed;
   bottom: 100px;
